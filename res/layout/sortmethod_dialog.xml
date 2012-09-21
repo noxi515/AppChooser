@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:orientation="vertical" >
+
+	<LinearLayout
+		android:layout_width="match_parent"
+		android:layout_height="@dimen/actionbar_height"
+		android:orientation="horizontal" >
+
+		<FrameLayout
+			android:id="@+id/layout_ascending"
+			android:layout_width="0dp"
+			android:layout_height="match_parent"
+			android:layout_weight="1"
+			android:background="?attr/selectableItemBackground"
+			android:clickable="true"
+			android:contentDescription="@string/description_sort_asc"
+			android:focusable="true" >
+
+			<RadioButton
+				android:id="@+id/radio_ascending"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_gravity="center_vertical"
+				android:layout_marginLeft="10dp"
+				android:clickable="false"
+				android:duplicateParentState="true"
+				android:focusable="false" />
+
+			<ImageView
+				android:layout_width="32dp"
+				android:layout_height="32dp"
+				android:layout_gravity="center"
+				android:clickable="false"
+				android:focusable="false"
+				android:src="@drawable/ic_action_sort_dark" />
+		</FrameLayout>
+
+		<View
+			android:layout_width="1dp"
+			android:layout_height="match_parent"
+			android:background="?attr/dividerVertical" />
+
+		<FrameLayout
+			android:id="@+id/layout_descending"
+			android:layout_width="0dp"
+			android:layout_height="match_parent"
+			android:layout_weight="1"
+			android:background="?attr/selectableItemBackground"
+			android:clickable="true"
+			android:contentDescription="@string/description_sort_desc"
+			android:focusable="true" >
+
+			<RadioButton
+				android:id="@+id/radio_descending"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_gravity="center_vertical"
+				android:layout_marginLeft="10dp"
+				android:clickable="false"
+				android:duplicateParentState="true"
+				android:focusable="false" />
+
+			<ImageView
+				android:layout_width="32dp"
+				android:layout_height="32dp"
+				android:layout_gravity="center"
+				android:clickable="false"
+				android:focusable="false"
+				android:src="@drawable/ic_action_sort_dark_reverse" />
+		</FrameLayout>
+	</LinearLayout>
+
+	<View
+		android:layout_width="match_parent"
+		android:layout_height="1dp"
+		android:background="?attr/dividerHorizontal" />
+
+	<ListView
+		android:id="@+id/listview"
+		android:layout_width="match_parent"
+		android:layout_height="0dp"
+		android:layout_weight="1" />
+
+</LinearLayout>

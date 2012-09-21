@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+	<!-- Split action bar height -->
+	<dimen name="actionbar_height">56dp</dimen>
+	<!-- ActionBar item min width -->
+	<dimen name="actionitem_min_width">64dp</dimen>
+	<!-- ChooserDialog width -->
+	<integer name="chooserdialog_width">-1</integer>
+	<!-- ChooserDialog title height -->
+	<dimen name="chooserdialog_title_height">64dp</dimen>
+
+	<!-- ChooserDialog listview vertical padding of each item -->
+	<dimen name="list_item_vertical_padding">6dp</dimen>
+	<!-- ChooserDialog listview left padding of each item -->
+	<dimen name="list_item_left_padding">15dp</dimen>
+	<!-- ChooserDialog listview right padding of each item -->
+	<dimen name="list_item_right_padding">15dp</dimen>
+
+</resources>

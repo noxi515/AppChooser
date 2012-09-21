@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+
+	<style name="Theme.Dark" parent="android:style/Theme.Holo">
+		<item name="android:windowBackground">@android:color/transparent</item>
+		<item name="android:colorBackgroundCacheHint">@null</item>
+		<item name="android:windowIsTranslucent">true</item>
+		<item name="android:windowAnimationStyle">@android:style/Animation</item>
+		<item name="android:windowActionBar">false</item>
+		<item name="android:windowNoTitle">true</item>
+		<item name="android:windowContentOverlay">@null</item>
+		<item name="selectableItemBackground">@drawable/item_background_holo_dark</item>
+		<item name="textColorPrimary">?android:attr/textColorPrimary</item>
+		<item name="dialogTheme">@style/Theme.Dialog.Dark</item>
+		<item name="dividerHorizontal">@drawable/list_divider_holo_dark</item>
+		<item name="dividerVertical">@drawable/list_divider_holo_dark</item>
+		<item name="actionItemSend">@drawable/ic_action_send_dark</item>
+		<item name="actionItemSendMultiple">@drawable/ic_action_send_multiple_dark</item>
+	</style>
+
+	<!-- ダイアログ用テーマ -->
+	<eat-comment />
+
+	<style name="Theme.Dialog.Dark" parent="android:style/Theme.Holo.Dialog" />
+
+</resources>

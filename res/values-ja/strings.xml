@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+	<!-- Application name -->
+	<eat-comment />
+
+	<!-- AppChooser launcher name -->
+	<string name="app_name">AppChooser</string>
+	<!-- AppChooser Setting activity name -->
+	<string name="app_name_settings">AppChooserの設定</string>
+
+	<!-- ChooserDialog using -->
+	<eat-comment />
+
+	<!-- Default chooser dialog title -->
+	<string name="default_chooser_title">アプリケーションを選択</string>
+	<!-- ToastMessage when no target found -->
+	<string name="toast_no_target_found">対象のアプリがありません</string>
+	<!-- Message for changing temporary item's visibility -->
+	<string name="message_cannot_register_database">「%1$s」は一時アイテムの為、表示・非表示の切り替えを行うことは出来ません。</string>
+	<string name="componentfolder_itemcount">（%1$d アイテム）</string>
+	<string name="description_action_sort">ソート</string>
+	<string name="description_toggle_send_mode">マルチ共有モード切替</string>
+	<string name="description_restore_items">アイテムの再表示</string>
+
+	<!-- Restore item dialog -->
+	<eat-comment />
+
+	<string name="title_restore_items">再表示設定</string>
+	<string name="message_restore_items">削除したアプリを再表示します。この操作は元に戻すことが出来ません。</string>
+	<string name="restore_ok">復元する</string>
+
+	<!-- Sort mode dialog -->
+	<eat-comment />
+
+	<string name="sort_by_frequency">利用頻度</string>
+	<string name="sort_by_name">アイテム名</string>
+	<string name="sort_by_history">利用履歴</string>
+	<string name="description_sort_asc">昇順に並び替え</string>
+	<string name="description_sort_desc">降順に並び替え</string>
+
+	<!-- Switch item's visibility dialog -->
+	<eat-comment />
+
+	<!-- DialogMessage: make item invisible -->
+	<string name="message_change_component_invisible">%1$sを非表示対象にします。</string>
+	<!-- Never show the dialog for confirm changing an item's visibility -->
+	<string name="text_never_show_again">次回から表示しない</string>
+
+</resources>

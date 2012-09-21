@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+	<!-- Application name -->
+	<eat-comment />
+
+	<!-- AppChooser launcher name -->
+	<string name="app_name">AppChooser</string>
+	<!-- AppChooser Setting activity name -->
+	<string name="app_name_settings">AppChooser Settings</string>
+
+	<!-- ChooserDialog using -->
+	<eat-comment />
+
+	<!-- Default chooser dialog title -->
+	<string name="default_chooser_title">Complete action using</string>
+	<!-- ToastMessage when no target found -->
+	<string name="toast_no_target_found">No target found</string>
+	<!-- Message for changing temporary item's visibility -->
+	<string name="message_cannot_register_database">\"%1$s\" cannot be hidden or shown as this is a temporary item.</string>
+	<string name="componentfolder_itemcount">(%1$d items)</string>
+	<string name="description_action_sort">Sort</string>
+	<string name="description_toggle_send_mode">Toggle single/multiple sharing mode</string>
+	<string name="description_restore_items">Reset visiblility settings</string>
+
+	<!-- Restore item dialog -->
+	<eat-comment />
+
+	<string name="title_restore_items">Restore apps</string>
+	<string name="message_restore_items">Restore removed apps. This action cannot be interrupted.</string>
+	<string name="restore_ok">Restore</string>
+
+	<!-- Sort mode dialog -->
+	<eat-comment />
+
+	<string name="sort_by_frequency">Frequency</string>
+	<string name="sort_by_name">Item name</string>
+	<string name="sort_by_history">History</string>
+	<string name="description_sort_asc">Ascending sort</string>
+	<string name="description_sort_desc">Descending sort</string>
+
+	<!-- Switch item's visibility dialog -->
+	<eat-comment />
+
+	<!-- DialogMessage: make item invisible -->
+	<string name="message_change_component_invisible">Do you really hide %1$s?</string>
+	<!-- Never show the dialog for confirm changing an item's visibility -->
+	<string name="text_never_show_again">Never show again</string>
+
+</resources>

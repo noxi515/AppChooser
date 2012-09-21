@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+	<!-- ChooserDialog width -->
+	<integer name="chooserdialog_width">90</integer>
+
+</resources>

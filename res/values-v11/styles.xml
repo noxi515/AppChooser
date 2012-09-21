@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+	<style name="TextAppearance.DialogWindowTitle">
+		<item name="android:textSize">22sp</item>
+		<item name="android:textColor">@color/holo_blue_light</item>
+	</style>
+
+</resources>

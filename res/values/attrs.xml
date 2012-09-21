@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+	<!-- AppChooser theme attributes -->
+	<declare-styleable name="Theme">
+		<attr name="textColorPrimary" format="color" />
+		<attr name="dialogTheme" format="reference" />
+		<attr name="dividerHorizontal" format="reference" />
+		<attr name="dividerVertical" format="reference" />
+		<attr name="selectableItemBackground" format="reference" />
+		<attr name="actionItemSend" format="reference" />
+		<attr name="actionItemSendMultiple" format="reference" />
+	</declare-styleable>
+
+</resources>

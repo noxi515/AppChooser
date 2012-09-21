@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+	<!-- Sort methods for component -->
+	<string-array name="sort">
+		<item>@string/sort_by_frequency</item>
+		<item>@string/sort_by_name</item>
+		<item>@string/sort_by_history</item>
+	</string-array>
+
+</resources>

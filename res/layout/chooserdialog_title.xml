@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android" >
+
+	<LinearLayout
+		android:id="@+id/actionbar"
+		android:layout_width="match_parent"
+		android:layout_height="@dimen/chooserdialog_title_height"
+		android:gravity="center_vertical"
+		android:orientation="horizontal" >
+
+		<TextView
+			android:id="@+id/actionbar_title"
+			style="@style/DialogWindowTitle"
+			android:layout_width="0dp"
+			android:layout_height="wrap_content"
+			android:layout_weight="1"
+			android:paddingBottom="9dp"
+			android:paddingLeft="10dp"
+			android:paddingRight="10dp"
+			android:paddingTop="9dp" />
+	</LinearLayout>
+
+	<ImageView
+		android:layout_width="match_parent"
+		android:layout_height="1dp"
+		android:gravity="fill_horizontal"
+		android:scaleType="fitXY"
+		android:src="?attr/dividerHorizontal" />
+
+</merge>

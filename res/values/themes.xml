@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+
+	<style name="Theme" parent="android:style/Theme" />
+
+	<style name="Theme.Dark" parent="android:style/Theme.Translucent.NoTitleBar">
+		<item name="selectableItemBackground">@drawable/item_background_holo_dark</item>
+		<item name="textColorPrimary">?android:attr/textColorPrimary</item>
+		<item name="dialogTheme">@style/Theme.Dialog.Dark</item>
+		<item name="dividerHorizontal">@drawable/list_divider_holo_dark</item>
+		<item name="dividerVertical">@drawable/list_divider_holo_dark</item>
+		<item name="actionItemSend">@drawable/ic_action_send_dark</item>
+		<item name="actionItemSendMultiple">@drawable/ic_action_send_multiple_dark</item>
+	</style>
+
+	<!-- ダイアログ用テーマ -->
+	<eat-comment />
+
+	<style name="Theme.Dialog" />
+
+	<style name="Theme.Dialog.Dark" parent="android:style/Theme.Dialog">
+		<item name="android:windowBackground">@drawable/panel_background_black</item>
+	</style>
+
+</resources>
