@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-	<style name="TextAppearance" parent="android:style/TextAppearance" />
+    <style name="TextAppearance" parent="android:style/TextAppearance" />
 
-	<style name="TextAppearance.DialogWindowTitle">
-		<item name="android:textSize">18sp</item>
-	</style>
+    <style name="TextAppearance.DialogWindowTitle">
+        <item name="android:textSize">18sp</item>
+    </style>
 
-	<style name="DialogWindowTitle">
-		<item name="android:maxLines">1</item>
-		<item name="android:scrollHorizontally">true</item>
-		<item name="android:textAppearance">@style/TextAppearance.DialogWindowTitle</item>
-	</style>
+    <style name="DialogWindowTitle">
+        <item name="android:maxLines">1</item>
+        <item name="android:scrollHorizontally">true</item>
+        <item name="android:textAppearance">@style/TextAppearance.DialogWindowTitle</item>
+    </style>
 
 </resources>

@@ -5,8 +5,8 @@ package jp.co.noxi.apppicker.app;
  */
 interface ComponentLoaderHolder {
 
-	/**
-	 * コンポーネント一覧を取得する
-	 */
-	void getComponents(ChooserDialog chooserDialog);
+    /**
+     * コンポーネント一覧を取得する
+     */
+    void getComponents(ChooserDialog chooserDialog);
 }

@@ -5,8 +5,8 @@ package jp.co.noxi.apppicker.content;
  */
 public interface Clearable {
 
-	/**
-	 * リソースを解放する
-	 */
-	void clear();
+    /**
+     * リソースを解放する
+     */
+    void clear();
 }

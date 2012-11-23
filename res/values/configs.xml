@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-	<!-- Component item invisible alpha value -->
-	<eat-comment />
+    <!-- Component item invisible alpha value -->
+    <eat-comment />
 
-	<item name="invisible_item_alpha_dark" format="float" type="dimen">0.45</item>
-	<item name="invisible_item_alpha_light" format="float" type="dimen">0.4</item>
+    <item name="invisible_item_alpha_dark" format="float" type="dimen">0.45</item>
+    <item name="invisible_item_alpha_light" format="float" type="dimen">0.4</item>
 
-	<!-- ChooserDialog width -->
-	<integer name="chooserdialog_width">95</integer>
+    <!-- ChooserDialog width -->
+    <integer name="chooserdialog_width">95</integer>
 
 </resources>
