@@ -47,4 +47,12 @@
     <!-- Never show the dialog for confirm changing an item's visibility -->
     <string name="text_never_show_again">次回から表示しない</string>
 
+    <!-- Check permission dialog -->
+    <eat-comment />
+
+    <string name="title_permission_lacked">権限がありません</string>
+    <string name="maybe_permission_lacked">選択したアプリを利用する権限が足りません。</string>
+    <string name="button_force_launch">開く</string>
+    <string name="permission_denial">権限が無いため利用できませんでした</string>
+
 </resources>

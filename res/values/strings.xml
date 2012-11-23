@@ -47,4 +47,12 @@
     <!-- Never show the dialog for confirm changing an item's visibility -->
     <string name="text_never_show_again">Never show again</string>
 
+    <!-- Check permission dialog -->
+    <eat-comment />
+
+    <string name="title_permission_lacked">No permission</string>
+    <string name="maybe_permission_lacked">The selected app requires some permission for use.</string>
+    <string name="button_force_launch">Launch</string>
+    <string name="permission_denial">Unfortunately, access denied by lack of permission.</string>
+
 </resources>

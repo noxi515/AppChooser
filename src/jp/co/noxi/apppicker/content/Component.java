@@ -6,8 +6,10 @@ import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.content.pm.ResolveInfo;
 import android.graphics.drawable.Drawable;
+import android.os.Parcel;
+import android.os.Parcelable;
 
-public class Component {
+public class Component implements Parcelable {
 
     private static final String INTENT_EXTRA_HEADER = "noxi.picker.component.";
 
@@ -164,5 +166,48 @@ public class Component {
         }
         return true;
     }
+
+    @Override
+    public int describeContents() {
+        return 0;
+    }
+
+    @Override
+    public void writeToParcel(Parcel dest, int flags) {
+        dest.writeString(packageName);
+        dest.writeString(className);
+        dest.writeInt(count);
+        dest.writeInt(visibility ? 1 : 0);
+        dest.writeString(label.toString());
+        if (lastUseTime == null) {
+            dest.writeInt(0);
+        } else {
+            dest.writeInt(1);
+            dest.writeLong(lastUseTime.getTime());
+        }
+    }
+
+    public static final Parcelable.Creator<Component> CREATOR = new Parcelable.Creator<Component>() {
+        @Override
+        public Component createFromParcel(Parcel source) {
+            final String packageName = source.readString();
+            final String className = source.readString();
+            final int count = source.readInt();
+            final boolean visibility = source.readInt() == 1;
+            final CharSequence label = source.readString();
+            final Date lastUseTime = source.readInt() == 0 ? null : new Date(source.readLong());
+
+            Component c = new Component(label, null, count, visibility);
+            c.packageName = packageName;
+            c.className = className;
+            c.lastUseTime = lastUseTime;
+            return c;
+        }
+
+        @Override
+        public Component[] newArray(int size) {
+            return new Component[size];
+        }
+    };
 
 }
