@@ -2,8 +2,8 @@
     package="jp.co.noxi.apppicker"
     android:installLocation="internalOnly"
     android:sharedUserId="jp.co.noxi.pickapp"
-    android:versionCode="20"
-    android:versionName="2.0.0" >
+    android:versionCode="21"
+    android:versionName="2.0.1" >
 
     <uses-sdk
         android:minSdkVersion="8"
