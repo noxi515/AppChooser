@@ -31,16 +31,11 @@ public class ComponentLoader extends AsyncTaskLoader<ComponentHolder> {
 
     ComponentHolder mComponents;
 
-    public ComponentLoader(Context context, Intent intent) {
+    public ComponentLoader(Context context, Intent intent, Intent[] initialIntents) {
         super(context);
         mIntent = intent;
+        mInitialIntent = initialIntents;
         mPackageManager = context.getPackageManager();
-        if (intent.hasExtra(Intent.EXTRA_INITIAL_INTENTS)) {
-            mInitialIntent = (Intent[]) intent
-                    .getParcelableArrayExtra(Intent.EXTRA_INITIAL_INTENTS);
-        } else {
-            mInitialIntent = null;
-        }
     }
 
     /**
@@ -53,8 +48,8 @@ public class ComponentLoader extends AsyncTaskLoader<ComponentHolder> {
         if (Common.DEBUG) {
             Log.d(TAG, "AppChooser loadInBackground start");
         }
-        List<ResolveInfo> resolves = mPackageManager.queryIntentActivities(mIntent,
-                PackageManager.MATCH_DEFAULT_ONLY | PackageManager.GET_RESOLVED_FILTER);
+        List<ResolveInfo> resolves = mPackageManager
+                .queryIntentActivities(mIntent, PackageManager.MATCH_DEFAULT_ONLY);
 
         if (mInitialIntent != null) {
             for (Intent ii : mInitialIntent) {

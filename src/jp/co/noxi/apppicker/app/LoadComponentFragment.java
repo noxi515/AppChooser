@@ -27,9 +27,11 @@ public class LoadComponentFragment extends Fragment
 
     @Override
     public Loader<ComponentHolder> onCreateLoader(int id, Bundle args) {
-        final Activity activity = getActivity();
-        final Intent intent = ((ChooserController) activity).getChooserIntent();
-        return new ComponentLoader(activity, intent);
+        Activity activity = getActivity();
+        ChooserController controller = (ChooserController) activity;
+        final Intent intent = controller.getChooserIntent();
+        final Intent[] initialIntents = controller.getChooserInitialIntent();
+        return new ComponentLoader(activity, intent, initialIntents);
     }
 
     @Override

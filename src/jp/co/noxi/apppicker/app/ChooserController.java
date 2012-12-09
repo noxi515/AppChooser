@@ -36,6 +36,11 @@ interface ChooserController {
      * Chooserを表示するためのIntentを取得する
      */
     Intent getChooserIntent();
+    
+    /**
+     * Chooserを表示するためのIntentを取得する
+     */
+    Intent[] getChooserInitialIntent();
 
     /**
      * DialogTitleを取得する

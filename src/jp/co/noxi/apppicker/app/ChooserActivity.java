@@ -33,6 +33,10 @@ public final class ChooserActivity extends FragmentActivity
      */
     private static final String SAVED_STATE_CHOOSER_INTENT = Common.SAVED_SCHEME + "controller.intent";
     /**
+     * ChooserのInitilalIntentsの保存キー
+     */
+    private static final String SAVED_STATE_CHOOSER_INITIAL_INTENT = Common.SAVED_SCHEME + "controller.initial_intent";
+    /**
      * DialogTitleの保存キー
      */
     private static final String SAVED_STATE_DIALOG_TITLE = Common.SAVED_SCHEME + "controller.title";
@@ -48,6 +52,7 @@ public final class ChooserActivity extends FragmentActivity
     private ComponentLoaderHolder mComponentHolder;
     private ChooserControllerDetail mControllerDetail;
     private Intent mChooserIntent;
+    private Intent[] mChooserInitialIntent;
     private CharSequence mDialogTitle;
     private int mComponentSize;
 
@@ -82,6 +87,19 @@ public final class ChooserActivity extends FragmentActivity
             mChooserIntent.setComponent(null);
             mChooserIntent.setPackage(null);
 
+            if (intent.hasExtra(Intent.EXTRA_INITIAL_INTENTS)) {
+                Parcelable[] pa = intent
+                        .getParcelableArrayExtra(Intent.EXTRA_INITIAL_INTENTS);
+                if (pa != null) {
+                    mChooserInitialIntent = new Intent[pa.length];
+                    for (int i = 0, length = pa.length; i < length; i++) {
+                        if (pa[i] instanceof Intent) {
+                            mChooserInitialIntent[i] = (Intent) pa[i];
+                        }
+                    }
+                }
+            }
+
             initChooserControllerDetail(mChooserIntent.getAction());
             mComponentHolder = mControllerDetail.newComponentLoaderHolder();
             if (!(mComponentHolder instanceof Fragment)) {
@@ -96,6 +114,8 @@ public final class ChooserActivity extends FragmentActivity
             mComponentHolder = (ComponentLoaderHolder) fm.findFragmentByTag(TAG_COMPONENT_HOLDER);
             mChooserDialog = (ChooserDialog) fm.findFragmentByTag(TAG_CHOOSER_DIALOG);
             mChooserIntent = savedInstanceState.getParcelable(SAVED_STATE_CHOOSER_INTENT);
+            mChooserInitialIntent = (Intent[]) savedInstanceState
+                    .getParcelableArray(SAVED_STATE_CHOOSER_INITIAL_INTENT);
             mDialogTitle = savedInstanceState.getString(SAVED_STATE_DIALOG_TITLE);
             mComponentSize = savedInstanceState.getInt(SAVED_STATE_COMPONENT_SIZE);
             initChooserControllerDetail(mChooserIntent.getAction());
@@ -106,6 +126,10 @@ public final class ChooserActivity extends FragmentActivity
     protected void onSaveInstanceState(Bundle outState) {
         super.onSaveInstanceState(outState);
         outState.putParcelable(SAVED_STATE_CHOOSER_INTENT, mChooserIntent);
+        if (mChooserInitialIntent != null) {
+            outState.putParcelableArray(
+                    SAVED_STATE_CHOOSER_INITIAL_INTENT, mChooserInitialIntent);
+        }
         if (mDialogTitle != null) {
             outState.putCharSequence(SAVED_STATE_DIALOG_TITLE, mDialogTitle);
         }
@@ -154,6 +178,11 @@ public final class ChooserActivity extends FragmentActivity
     @Override
     public Intent getChooserIntent() {
         return mChooserIntent;
+    }
+
+    @Override
+    public Intent[] getChooserInitialIntent() {
+        return mChooserInitialIntent;
     }
 
     @Override
